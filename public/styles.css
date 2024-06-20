@@ -1,0 +1,51 @@
+:root{
+  --main-font: 'Roboto', sans-serif;
+  --h1-font-size: 40px;
+  --h2-font-size: 32px;
+  --h3-font-size: 24px;
+  --body-font-size: 16px;
+
+  --padding-large: 32px;
+  --padding-medium: 16px;
+  --padding-small: 8px;
+
+  --margin-large: 32px;
+  --margin-medium: 16px;
+  --margin-small: 8px;
+
+  --link-hover-color: gray;
+  --link-color: black;
+  
+}
+
+body{
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+}
+
+/* Navigation */
+.nav__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none; /* Remove default list styling */
+  padding: var(--padding-large); 
+}
+
+.nav__item{
+  margin: 0 var(--margin-large);
+}
+
+.nav__link{
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: var(--body-font-size);
+}
+
+.nav__item a:hover{
+  color: var(--link-hover-color);
+}
+
+
+
+
