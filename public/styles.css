@@ -5,10 +5,12 @@
   --h3-font-size: 24px;
   --body-font-size: 16px;
 
+  --padding-extra-large: 64px;
   --padding-large: 32px;
   --padding-medium: 16px;
   --padding-small: 8px;
 
+  --margin-extra-large: 64px;
   --margin-large: 32px;
   --margin-medium: 16px;
   --margin-small: 8px;
@@ -16,12 +18,17 @@
   --link-hover-color: gray;
   --link-color: black;
   
+  --font-body-color: #5f5f5f;
+  --font-button-color: #ffff;
+
+  --button-regular-color: #0c0c0c;
+  --button-hover-color: #5f5f5f;
 }
 
 body{
   font-family: var(--main-font);
   font-size: var(--body-font-size);
-  background-color: #e5e5e5;
+  line-height: 1.25;
 }
 
 /* == Navigation */
@@ -50,39 +57,36 @@ body{
 
 /* == Header */
 /* Avatar */
-.avatar{
+.intro{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: var(--margin-large);
+  
   width: 100%;
-  margin-top: 80px;
-  margin-bottom: var(--margin-medium);
+  padding-top: var(--padding-large);
+  padding-bottom: var(--margin-extra-large);
 }
 
-.avatar__image {
+.intro__image {
  width: 100px;
  height: 100px;
  object-fit: cover;
  border-radius: 50%;
 }
 
-/* Intro */
-.intro{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: gray;
-}
-
 .intro__title{
   font-size: var(--h1-font-size);
-  width: 400px;
   text-align: center;
+  width: 400px;
 }
 
-.intro__decription{
+.intro__description{
   font-size: var(--body-font-size);
+  color: var(--font-body-color);
+  text-align: center;
+  width: 400px;
 }
 
 /* Action */
@@ -91,12 +95,72 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin: var(--margin-large);
+  column-gap: var(--margin-large);
 }
 
 .intro__button{
+  background-color: var(--button-regular-color);
   width: 140px;
   height: 50px;
+  border-radius: 30px;
+
+  color: var(--font-button-color);
+  font-size: var(--body-font-size);
+
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
+.intro__button:hover{
+  background-color: var(--button-hover-color);
+}
 
+.intro__link{
+  font-size: var(--body-font-size);
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.intro__link:hover{
+  color: var(--link-hover-color);
+}
+
+/*==Skill list*/
+/*skill item*/
+.skillItem{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: flex-start;
+  column-gap: var(--margin-large);
+
+  width: 480px;
+}
+
+.skillItem__content{
+  display: flex;
+  flex-direction: column;
+}
+
+.skillItem__image{
+
+}
+
+.skillItem__title{
+  font-size: var(--h3-font-size);
+}
+
+.skillItem__description{
+  font-size: var(--body-font-size);
+  color: var(--font-body-color);
+}
+
+/*skill list*/
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  row-gap: var(--margin-large);
+  padding-top: var(--margin-extra-large);
+}
