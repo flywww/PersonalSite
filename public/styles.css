@@ -1,7 +1,7 @@
 :root{
-  --main-font: 'Roboto', sans-serif;
-  --h1-font-size: 40px;
-  --h2-font-size: 32px;
+  --main-font: Inter, sans-serif;
+  --h1-font-size: 36px;
+  --h2-font-size: 30px;
   --h3-font-size: 24px;
   --body-font-size: 16px;
 
@@ -25,11 +25,91 @@
   --button-hover-color: #5f5f5f;
 }
 
+
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: -0.9px;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.75px;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -0.6px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+.lead {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.table-head {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+}
+.paragraph {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+}
+small {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+.muted {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+}
+
 body{
   font-family: var(--main-font);
-  font-size: var(--body-font-size);
   line-height: 1.25;
 }
+
+
+/* == Utilities */
+/* Check all image with alt attribute */
+img { border: 10px solid red; }
+img[alt]:not([alt=""]) { border:none; }
 
 /* == Navigation */
 .nav__list{
@@ -37,7 +117,11 @@ body{
   flex-direction: row;
   justify-content: flex-end;
   list-style: none; /* Remove default list styling */
-  padding: var(--padding-large); 
+  
+  padding-top: var(--padding-large); 
+  padding-bottom: var(--padding-large); 
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .nav__item{
@@ -64,9 +148,10 @@ body{
   flex-direction: column;
   row-gap: var(--margin-large);
   
-  width: 100%;
   padding-top: var(--padding-large);
   padding-bottom: var(--margin-extra-large);
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .intro__image {
@@ -77,13 +162,11 @@ body{
 }
 
 .intro__title{
-  font-size: var(--h1-font-size);
   text-align: center;
   width: 400px;
 }
 
 .intro__description{
-  font-size: var(--body-font-size);
   color: var(--font-body-color);
   text-align: center;
   width: 400px;
@@ -147,20 +230,25 @@ body{
 }
 
 .skillItem__title{
-  font-size: var(--h3-font-size);
 }
 
 .skillItem__description{
-  font-size: var(--body-font-size);
   color: var(--font-body-color);
 }
 
 /*skill list*/
 .skills {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  
   row-gap: var(--margin-large);
   padding-top: var(--margin-extra-large);
+
+  margin-left: 100px;
+  margin-right: 100px;
 }
+
+/* == Experiences */

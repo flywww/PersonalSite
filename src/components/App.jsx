@@ -3,14 +3,16 @@ import React from 'react';
 import NavigationBar from "./NavigationBar";
 import Header from "./Header"
 import SkillList from "./SkillList"
+import Experience from './Experience';
 
 function App() {
 
   return (
     <>
       <NavigationBar/>
-        <Header/>
-        <SkillList />
+      <Header/>
+      <SkillList />
+      <Experience />
     </>
   )
 }
