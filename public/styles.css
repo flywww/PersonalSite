@@ -9,11 +9,13 @@
   --padding-large: 32px;
   --padding-medium: 16px;
   --padding-small: 8px;
+  --padding-extreme-small: 4px;
 
   --margin-extra-large: 64px;
   --margin-large: 32px;
   --margin-medium: 16px;
   --margin-small: 8px;
+  --margin-extreme-small: 4px;
 
   --link-hover-color: gray;
   --link-color: black;
@@ -25,6 +27,7 @@
   --button-hover-color: #5f5f5f;
 }
 
+/* ====== global settings ====== */
 
 h1 {
   font-size: 36px;
@@ -106,7 +109,7 @@ body{
 }
 
 
-/* == Utilities */
+/* ====== Utilities ======*/
 /* Check all image with alt attribute */
 img { border: 10px solid red; }
 img[alt]:not([alt=""]) { border:none; }
@@ -139,7 +142,7 @@ img[alt]:not([alt=""]) { border:none; }
 }
 
 
-/* == Header */
+/* ====== Header ======*/
 /* Avatar */
 .intro{
   display: flex;
@@ -208,7 +211,7 @@ img[alt]:not([alt=""]) { border:none; }
   color: var(--link-hover-color);
 }
 
-/*==Skill list*/
+/*====== Skill list ==========*/
 /*skill item*/
 .skillItem{
   display: flex;
@@ -251,4 +254,112 @@ img[alt]:not([alt=""]) { border:none; }
   margin-right: 100px;
 }
 
-/* == Experiences */
+/* ====== Experiences ==========*/
+/* experiences block */
+.experiences{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: var(--margin-extra-large);
+}
+
+/* achievement block */
+.achievement{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: var(--margin-large);
+}
+.achievement > div,.achievement >  h2,.achievement > p{
+  width: 200px;
+  text-align: center;
+}
+
+
+/* timeline */
+.timeline{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding-top: var(--margin-large);
+}
+
+.timeline__item{
+  position: relative; /* Set as positioned parent element for ::after and ::before child element */
+  
+  display: flex;
+  flex-direction: row;  
+  width: 100%;
+  height: 200px;
+}
+
+.timeline__left {
+  width: 50%;
+
+  text-align: right;
+  padding-right: var(--padding-extra-large);
+}
+
+.timeline__right {
+  width: 50%;
+
+  text-align: left;
+  padding-left: var(--padding-extra-large);
+}
+
+
+/* Vertical line */
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: gray;
+  transform: translateX(-50%);
+}
+
+/* Dot at the top */
+.timeline__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+
+  background-color: black;
+  border-radius: 50%;
+  border: 4px solid gray;
+
+  transform: translate(-50%, -50%);
+}
+
+.timeline__company, .timeline__duration{
+  text-align: right;
+}
+
+.timeline__title, .timeline__highlights{
+  text-align: left;
+}
+
+.timeline__highlights{
+  list-style-type: disc;
+  padding-top: var(--padding-extreme-small);
+}
+
+.timeline__duration{
+  padding-top: var(--padding-extreme-small);
+}
+
+

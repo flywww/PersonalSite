@@ -5,11 +5,11 @@ export default function Achievement(props){
         <div className="achievement">
                 <div>
                     <h2>15</h2>
-                    <small>Product complete</small>
+                    <small><p>Product complete</p></small>
                 </div>
                 <div>
                     <h2>12</h2>
-                    <small>Year experience</small>
+                    <small><p>Year experience</p></small>
                 </div>
             </div>
     )
