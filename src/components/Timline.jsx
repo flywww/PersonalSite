@@ -36,8 +36,7 @@ const timelineData = [{
 
 export default function Timeline(props){
     return(
-        
-        <div className="timeline">
+        <section className="timeline">
             {timelineData.map( (e, index) => (
                 <div className="timeline__item" key={index}>
                     <div className="timeline__left">
@@ -55,7 +54,7 @@ export default function Timeline(props){
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     )   
 }
 

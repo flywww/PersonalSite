@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Achievement(props){
     return(
-        <div className="achievement">
+        <section className="achievement">
                 <div>
                     <h2>15</h2>
                     <small><p>Product complete</p></small>
@@ -11,6 +11,6 @@ export default function Achievement(props){
                     <h2>12</h2>
                     <small><p>Year experience</p></small>
                 </div>
-            </div>
+            </section>
     )
 }

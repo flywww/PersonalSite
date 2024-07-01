@@ -4,6 +4,8 @@ import NavigationBar from "./NavigationBar";
 import Header from "./Header"
 import SkillList from "./SkillList"
 import Experience from './Experience';
+import Portfolio from './Portfolio';
+import Footer from './Footer';
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
       <Header/>
       <SkillList />
       <Experience />
+      <Portfolio />
+      <Footer />
     </>
   )
 }
