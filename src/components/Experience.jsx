@@ -1,6 +1,6 @@
 import React from "react";
-import Timeline from "./Timline";
-import Achievement from "./Achievment";
+import Timeline from "./Timeline";
+import Achievement from "./Achievement";
 
 export default function Experience(){
     return(
