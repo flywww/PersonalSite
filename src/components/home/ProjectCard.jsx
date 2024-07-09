@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function PortfolioCard(props){
+export default function ProjectCard(props){
     return(
         <div className="card">
             <img className="card__img" src= {props.imgURL} alt= {props.imgALT} />
-            <h4 className="card__title">{props.title}</h4>
-            <small><p className="card__intro">{props.intro}</p></small>
+            <h3 className="card__title">{props.title}</h3>
+            <p className="card__intro">{props.intro}</p>
         </div>
     )
 }
