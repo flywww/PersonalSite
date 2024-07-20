@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../home/ProjectCard";
+import ProjectCard from "../about/ProjectCard";
 
 const projectData = [{
     imgURL: "../src/assets/project/MEDIRECO.jpg",
@@ -28,7 +28,7 @@ const projectData = [{
     intro: "A Blackbox for operating room, record all surgery details."
 }];
 
-export default function Projects() {
+const ProjectsPage = () => {
     return(
         <section className="project">
             <h1 className="project__title">Projects</h1>
@@ -50,3 +50,5 @@ export default function Projects() {
         </section>
     )
 }
+
+ export default ProjectsPage;

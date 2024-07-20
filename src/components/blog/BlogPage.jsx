@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function Blog() {
+const BlogPage = () => {
     return(
         <section className="Blog">
             Blog
         </section>
     )
 }
+
+export default BlogPage;

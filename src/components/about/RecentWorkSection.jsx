@@ -7,12 +7,12 @@ const projectData = [{
     title: "MEDIRECO",
     intro: "A Blackbox for operating room, record all surgery details."
 },{
-    imgURL: "../src/assets/project/MEDIRECO.jpg",
+    imgURL: "../src/assets/project/MEDISTATION.png",
     imgALT: "MEDISTATION",
     title: "MEDISTATION",
     intro: "A Blackbox for operating room, record all surgery details."
 },{
-    imgURL: "../src/assets/project/MEDIRECO.jpg",
+    imgURL: "../src/assets/project/mocacare.png",
     imgALT: "ORDashboard",
     title: "ORDashboard",
     intro: "A Blackbox for operating room, record all surgery details."

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Achievement(props){
+export default function AchievementSection(props){
     return(
         <section className="achievement">
                 <div>
