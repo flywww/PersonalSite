@@ -3,6 +3,11 @@
   --fontSize-heading1: 36px;
   --fontSize-heading2: 30px;
   --fontSize-heading3: 24px;
+  --fontSize-heading4: 20px;
+  --fontSize-lead: 20px;
+  --fontSize-tableHead: 16px;
+  --fontSize-small: 14px;
+  --fontSize-muted: 14px;
   --fontSize-body: 16px;
 
   --padding-extra-large: 64px;
@@ -48,82 +53,71 @@ body, html {
   overflow-x: hidden;
 }
 /* font settings */
-h1 {
-  font-size: 36px;
-  font-weight: 800;
+h1, h2, h3, h4, .lead, .table-head, .paragraph, small, .muted{
   font-stretch: normal;
   font-style: normal;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--fontSize-heading1);
+  font-weight: 800;
   line-height: 1.11;
   letter-spacing: -0.9px;
 }
 h2 {
-  font-size: 30px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
+  font-size: var(--fontSize-heading2);
   line-height: 1.2;
   letter-spacing: -0.75px;
 }
 h3 {
-  font-size: 24px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
+  font-size: var(--fontSize-heading3);
   line-height: 1.33;
   letter-spacing: -0.6px;
 }
 h4 {
-  font-size: 20px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
+  font-size: var(--fontSize-heading4);
   line-height: 1.4;
   letter-spacing: -0.5px;
 }
 .lead {
   font-family: Inter;
-  font-size: 20px;
+  font-size: var(--fontSize-lead);
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.4;
   letter-spacing: normal;
 }
 .table-head {
-  font-size: 16px;
+  font-size: var(--fontSize-tableHead);
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.75;
   letter-spacing: normal;
 }
 .paragraph {
-  font-size: 16px;
+  font-size: var(--fontSize-body);
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.75;
   letter-spacing: normal;
 }
 small {
-  font-size: 14px;
+  font-size: var(--fontSize-small);
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1;
   letter-spacing: normal;
 }
 .muted {
-  font-size: 14px;
+  font-size: var(--fontSize-muted);
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.43;
   letter-spacing: normal;
 }
 
 body{
   font-family: var(--fontFamily-main);
+  font-size: var(--fontSize-body);
   line-height: 1.25;
 }
 
@@ -158,10 +152,8 @@ img[alt]:not([alt=""]) { border:none; }
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--padding-large);
-  padding-bottom: var(--padding-large);
-  margin-left:  var(--margin-section);
-  margin-right: var(--margin-section);
+  padding: var(--padding-large) 0px;
+  margin: 0px var(--margin-section);
 }
 
 .nav__list{
@@ -214,15 +206,13 @@ img[alt]:not([alt=""]) { border:none; }
   border-radius: 50%;
 }
 
-.intro__title{
-  text-align: center;
+.intro__title, .intro__description{
   width: 400px;
+  text-align: center;
 }
 
 .intro__description{
   color: var(--font-body-color);
-  text-align: center;
-  width: 400px;
 }
 
 /* Action */
@@ -248,10 +238,8 @@ img[alt]:not([alt=""]) { border:none; }
   font-size: var(--fontSize-body);
   text-decoration: none;
 
-  transition-duration: 0.4s;
+  transition: background-color 0.4s, border 0.4s;
   cursor: pointer;
-
-  
 }
 
 .intro__button:hover{
@@ -305,11 +293,12 @@ img[alt]:not([alt=""]) { border:none; }
   align-items: center;
   flex-wrap: wrap;
   
+  max-width: 1000px;
   row-gap: var(--margin-large);
   padding-top: var(--margin-extra-large);
 
-  margin-left:  var(--margin-section);
-  margin-right:  var(--margin-section);
+  margin-left:  auto;
+  margin-right:  auto;
 }
 
 /* ====== Experiences ==========*/
@@ -334,7 +323,7 @@ img[alt]:not([alt=""]) { border:none; }
 
   padding-top: var(--margin-large);
 }
-.achievement > div,.achievement >  h2,.achievement > p{
+.achievement > *{
   width: 200px;
   text-align: center;
 }

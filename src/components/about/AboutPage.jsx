@@ -6,12 +6,12 @@ import RecentWorkSection from './RecentWorkSection';
 
 const AboutPage = () => {
     return (
-        <div>
+        <main>
             <HeaderSection/>
             <SkillSection />
             <ExperienceSection />
             <RecentWorkSection />
-        </div>
+        </main>
     );
 };
 

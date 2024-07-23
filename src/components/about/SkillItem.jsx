@@ -1,15 +1,15 @@
-import React from 'react'
+import {React, memo} from 'react'
 
-function SkillItem(props){
+const SkillItem = memo(function SkillItem({title, description, imgURL, imgALT}){
     return(
         <div className='skillItem'>
-            <img className='skillItem__image' src={props.imgURL} alt={props.imgALT} />
+            <img className='skillItem__image' src={imgURL} alt={imgALT} />
             <div className='skillItem__content'>
-              <h3 className='skillItem__title' >{props.title}</h3>
-              <p className='skillItem__description'>{props.description}</p>
+              <h3 className='skillItem__title' >{title}</h3>
+              <p className='skillItem__description'>{description}</p>
             </div>
         </div>
     )
-}
+})
 
 export default SkillItem;

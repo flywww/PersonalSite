@@ -1,61 +1,69 @@
-import React from "react";
+import {React, memo} from "react";
 
 const timelineData = [
     {
         companyName: "Twin Beans",
         duration: "2017-2024 (7yrs)",
         title: "Product Director",
-        highlight1: "Recruited and led a 6+ member team.",
-        highlight2: "Formulated strategies, increased project value fivefold.",
-        highlight3: "Products adopted by 80+ operating rooms in Taiwan.",
-        highlight4: "Designed Windows, Web, and Mobile apps, filed two patents."
-      },
-      {
+        highlights: [
+            "Recruited and led a 6+ member team.",
+            "Formulated strategies, increased project value fivefold.",
+            "Products adopted by 80+ operating rooms in Taiwan.",
+            "Designed Windows, Web, and Mobile apps, filed two patents."
+        ]
+    },
+    {
         companyName: "ATOM Health",
         duration: "2015-2017 (2yrs)",
         title: "Software Engineer",
-        highlight1: "Developed JDMCare APP for health metrics in China.",
-        highlight2: "Elevated ECG product safety to medical-grade standards."
-      },
-      {
+        highlights: [
+            "Developed JDMCare APP for health metrics in China.",
+            "Elevated ECG product safety to medical-grade standards."
+        ]
+    },
+    {
         companyName: "NeeMe Technologies",
         duration: "2014-2015 (2yrs)",
         title: "Founder & Software Engineer",
-        highlight1: "Built a team, joined AppWorks #9 accelerator.",
-        highlight2: "Developed and launched CaloShop iOS app."
-      },
-      {
+        highlights: [
+            "Built a team, joined AppWorks #9 accelerator.",
+            "Developed and launched CaloShop iOS app."
+        ]
+    },
+    {
         companyName: "ARKNAV International",
         duration: "2011-2014 (2.5yrs)",
         title: "Electronics Engineer",
-        highlight1: "Developed ECG products for hospitals.",
-        highlight2: "Led a product team.",
-        highlight3: "Developed heart rhythm algorithm for MCU chips."
-      }
-]
+        highlights: [
+            "Developed ECG products for hospitals.",
+            "Led a product team.",
+            "Developed heart rhythm algorithm for MCU chips."
+        ]
+    }
+];
 
-export default function Timeline(props){
+ const Timeline = memo(function Timeline(props){
     return(
         <section className="timeline">
-            {timelineData.map( (e, index) => (
+            {timelineData.map( (item, index) => (
                 <div className="timeline__item" key={index}>
                     <div className="timeline__left">
-                        <h3 className="timeline__company">{e.companyName}</h3>
-                        <small><p className="timeline__duration">{e.duration}</p></small>
+                        <h3 className="timeline__company">{item.companyName}</h3>
+                        <small><p className="timeline__duration">{item.duration}</p></small>
                     </div>
                     <div className="timeline__right">
-                        <h4 className="timeline__title">{e.title}</h4>
+                        <h4 className="timeline__title">{item.title}</h4>
                         <ul className="timeline__highlights">
-                            {e.highlight1 && <li>{e.highlight1}</li>}
-                            {e.highlight2 && <li>{e.highlight2}</li>}
-                            {e.highlight3 && <li>{e.highlight3}</li>}
-                            {e.highlight4 && <li>{e.highlight4}</li>}
-                            {e.highlight5 && <li>{e.highlight5}</li>}
+                            {item.highlights.map((highlight, index) => (
+                                <li key={index}>{highlight}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
             ))}
         </section>
     )   
-}
+})
+
+export default Timeline;
 
