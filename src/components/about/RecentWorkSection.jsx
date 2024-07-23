@@ -23,9 +23,6 @@ export default function RecentWork() {
         <section className='recent-work'>
             <h2 className='recent-work__title'>Recent work</h2>
             <div className="recent-work__carousel">
-                <button className='icon-button recent-work__button left' aria-label="Scroll left">
-                    <img src="../src/assets/project/arrow-left.png" alt="left arrow button" />
-                </button>
                 <div className='recent-work__list'>
                     {projectData.map((project, index) => {
                         return(
@@ -39,9 +36,6 @@ export default function RecentWork() {
                         )
                     })}
                 </div>
-                <button className='icon-button recent-work__button right' aria-label="Scroll right">
-                    <img src="../src/assets/project/arrow-right.png" alt="right arrow button" /> 
-                </button>
             </div>
         </section>
     )
