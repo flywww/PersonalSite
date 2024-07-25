@@ -3,7 +3,7 @@ import React from "react"
 export default function HeaderSection(){
     return(
         <section className="intro">
-            <img className="intro__image" src="./src/assets/avatar.jpg" alt="my profile avatar" />
+            <img className="intro__image" src="./public/assets/avatar.jpg" alt="my profile avatar" />
             <h1 className="intro__title">Product developer/manager</h1>
             <p className="intro__description">a software developer/product manager, playing around in medical tech, full-stack dev and web3.</p>
             <div className="intro__action">
