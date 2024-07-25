@@ -1,20 +1,22 @@
 import React from "react";
 import SkillItem from "./SkillItem";
+import CodingIconUrl from "../../assets/icon_circle_coding.png";
+import PlanIconUrl from "../../assets/icon_circle_plan.png";
 
 const skillData = [
-    {imgURL: "./public/assets/icon_circle_coding.png", 
+    {imgURL: CodingIconUrl, 
         imgALT: "Front-end development", 
         title: "Front-end development", 
         description: "Building front-end by using ReactJS and NextJS."},
-    {imgURL: "./public/assets/icon_circle_coding.png", 
+    {imgURL: CodingIconUrl, 
         imgALT: "Back-end development", 
         title: "Back-end development", 
         description: "Building back-end by using nodeJS and ExpressJS."},
-    {imgURL: "./public/assets/icon_circle_plan.png", 
+    {imgURL: PlanIconUrl, 
         imgALT: "Product strategy", 
         title: "Product strategy", 
         description: "Build vision, mission, and roadmap for products."},
-    {imgURL: "./public/assets/icon_circle_plan.png", 
+    {imgURL: PlanIconUrl, 
         imgALT: "Product planning", 
         title: "Product planning", 
         description: "Planing and managing products from ground up."}

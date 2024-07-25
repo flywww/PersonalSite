@@ -1,18 +1,21 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
+import medirecoUrl from "../../assets/project/MEDIRECO_1000x667.webp"
+import medistationUrl from '../../assets/project/MEDISTATION_1000x666.webp'
+import mocacareUrl from '../../assets/project/MOCACARE_1000x808.webp'
 
 const projectData = [{
-    imgURL: "../public/assets/project/MEDIRECO_1000X667.webp",
+    imgURL: medirecoUrl,
     imgALT: "MEDIRECO",
     title: "MEDIRECO",
     intro: "A Blackbox for operating room, record all surgery details."
 },{
-    imgURL: "../public/assets/project/MEDISTATION_1000x666.webp",
+    imgURL: medistationUrl,
     imgALT: "MEDISTATION",
     title: "MEDISTATION",
     intro: "A surgery case library platform for surgeons to review, learn, and share."
 },{
-    imgURL: "../public/assets/project/mocacare_1000X808.webp",
+    imgURL: mocacareUrl,
     imgALT: "MOCAheart",
     title: "MOCAheart",
     intro: "A smart heart tracker that measures vital sign with a quick scan of your thumbs."
