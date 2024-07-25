@@ -447,6 +447,7 @@ img[alt]:not([alt=""]) { border:none; }
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   column-gap: var(--margin-large);
 }
 
@@ -458,7 +459,7 @@ img[alt]:not([alt=""]) { border:none; }
 
   border-radius: var(--radius-sm);
   max-width: 376px;
-  max-height: 400px;
+  max-height: auto;
 
   min-width: 260px;
   min-height: 260px;
@@ -473,6 +474,9 @@ img[alt]:not([alt=""]) { border:none; }
 
 .card__img {
   width: 376px;
+  height: 240px;
+  object-fit: cover;
+  image-rendering: pixelated;
   border-radius: var(--radius-sm) var(--radius-sm) 0px 0px;
 }
 
@@ -486,7 +490,7 @@ img[alt]:not([alt=""]) { border:none; }
   padding-top: var(--padding-small);
   padding-left: var(--padding-medium);
   padding-right: var(--padding-medium);
-  padding-bottom: var(--padding-extreme-small);
+  padding-bottom: var(--padding-medium);
 }
 
 /* ====== Footer ==========*/

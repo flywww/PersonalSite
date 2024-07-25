@@ -2,20 +2,20 @@ import React from 'react'
 import ProjectCard from './ProjectCard'
 
 const projectData = [{
-    imgURL: "../src/assets/project/MEDIRECO.jpg",
+    imgURL: "../src/assets/project/MEDIRECO_1000X667.webp",
     imgALT: "MEDIRECO",
     title: "MEDIRECO",
     intro: "A Blackbox for operating room, record all surgery details."
 },{
-    imgURL: "../src/assets/project/MEDISTATION.png",
+    imgURL: "../src/assets/project/MEDISTATION_1000x666.webp",
     imgALT: "MEDISTATION",
     title: "MEDISTATION",
-    intro: "A Blackbox for operating room, record all surgery details."
+    intro: "A surgery case library platform for surgeons to review, learn, and share."
 },{
-    imgURL: "../src/assets/project/mocacare.png",
-    imgALT: "ORDashboard",
-    title: "ORDashboard",
-    intro: "A Blackbox for operating room, record all surgery details."
+    imgURL: "../src/assets/project/mocacare_1000X808.webp",
+    imgALT: "MOCAheart",
+    title: "MOCAheart",
+    intro: "A smart heart tracker that measures vital sign with a quick scan of your thumbs."
 }];
 
 export default function RecentWork() {
