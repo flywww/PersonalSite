@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../about/ProjectCard";
 import medirecoUrl from "../../assets/project/MEDIRECO_1000x667.webp"
 import medistationUrl from '../../assets/project/MEDISTATION_1000x666.webp'
+import medimeetUrl from '../../assets/project/MEDIMEET_1000x563.webp'
 import mocacareUrl from '../../assets/project/MOCACARE_1000x808.webp'
 import caloshopUrl from '../../assets/project/CaloShop_1000x880.webp'
 import ekrdiaUrl from '../../assets/project/eKRDIA_1000x865.webp'
@@ -16,6 +17,11 @@ const projectData = [{
     imgALT: "MEDISTATION",
     title: "MEDISTATION",
     intro: "A surgery case library platform for surgeons to review, learn, and share."
+},{
+    imgURL: medimeetUrl,
+    imgALT: "MEDIMEET",
+    title: "MEDIMEET",
+    intro: "A co-working and communication platform for surgeons."
 },{
     imgURL: mocacareUrl,
     imgALT: "MOCAheart",
